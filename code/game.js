@@ -186,6 +186,7 @@ scene('game', () => {
     color(RED),
     z(Z.ui),
     fixed(),
+    area(),
     "helperSpawnUI",
     "closeDeploy",
     {
