@@ -58,10 +58,15 @@ scene('game', () => {
     // x = area scale
   };
   
+  const MENUS = {
+    'helperSpawnUI': 'deploy',
+  };
+  
   function menu(action, name) {
-    get('helperSpawnUI').forEach((h) => {
+    get(name).forEach((h) => {
       h.pos.y = action == 'open' ? h.ogY : width()*30;
     });
+    openMenu.type = action == 'open' ? MENUS[name] : 'none';
   };
 
   // ui
@@ -74,6 +79,7 @@ scene('game', () => {
     z(Z.ui),
     area(),
     fixed(),
+    "openDeploy",
   ]);
 
   // environment
@@ -181,6 +187,7 @@ scene('game', () => {
     z(Z.ui),
     fixed(),
     "helperSpawnUI",
+    "closeDeploy",
     {
       ogY: height() - SCALE*2,
     }
@@ -448,6 +455,9 @@ scene('game', () => {
       player.lastAttack = time();
     };
   });
+  
+  onClick('openDeploy', () => { menu('open', 'helperSpawnUI'); });
+  onClick('closeDeploy', () => { menu('close', 'helperSpawnUI'); });
 
   onCollide('arrow', 'fighter', (a,e) => {
     if (a.from != e.alignment) {
