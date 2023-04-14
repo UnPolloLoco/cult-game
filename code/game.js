@@ -57,6 +57,12 @@ scene('game', () => {
     // m = sprite size
     // x = area scale
   };
+  
+  function menu(action, name) {
+    get('helperSpawnUI').forEach((h) => {
+      h.pos.y = action == 'open' ? h.ogY : width()*30;
+    });
+  };
 
   // ui
 
@@ -187,8 +193,8 @@ scene('game', () => {
     z(Z.ui),
     fixed(),
     area({ 
-      scale: vec2(1, 2.2),
-      offset: vec2(0, offsetScale(SCALE/4, 2.2)),
+      scale: vec2(1, 3),
+      offset: vec2(0, offsetScale(SCALE/4, 3)),
     }),
     "helperSpawnUI",
     {
