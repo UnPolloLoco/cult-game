@@ -180,7 +180,7 @@ scene('game', () => {
     color(rgb(100,100,100)),
     z(Z.ui),
     fixed(),
-    area(),
+    area({ scale: vec2(1, 1.4) }),
     "helperSpawnUI",
     {
       ogY: SCALE*5.25,
