@@ -51,6 +51,12 @@ scene('game', () => {
       Math.floor((x+1) /2),
     ];
   };
+  
+  function offsetScale(m,x) {
+    return m * ((1-x) / (2*x));
+    // m = sprite size
+    // x = area scale
+  };
 
   // ui
 
@@ -180,7 +186,10 @@ scene('game', () => {
     color(rgb(100,100,100)),
     z(Z.ui),
     fixed(),
-    area({ scale: vec2(1, 1.4) }),
+    area({ 
+      scale: vec2(1, 1.4),
+      offset: vec2(0, offsetScale(SCALE/4, 1.4)),
+    }),
     "helperSpawnUI",
     {
       ogY: SCALE*5.25,
