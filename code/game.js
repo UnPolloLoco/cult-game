@@ -187,8 +187,8 @@ scene('game', () => {
     z(Z.ui),
     fixed(),
     area({ 
-      scale: vec2(1, 1.4),
-      offset: vec2(0, offsetScale(SCALE/4, 1.4)),
+      scale: vec2(1, 2.2),
+      offset: vec2(0, offsetScale(SCALE/4, 2.2)),
     }),
     "helperSpawnUI",
     {
