@@ -8,6 +8,8 @@ Started on December 31, 2022
 
 - Player can get stunned (never killed because plot armor)
 - Start working on UI
+- Deploy tells you where helpers will spawn
+- Deploy wont work if any are outside of the borders
 
 **Later**
 
