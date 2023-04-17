@@ -517,7 +517,7 @@ scene('game', () => {
   });
 
   onKeyPress('s', () => {
-    let helperCount = magicNumbers(9); // max 9
+    let helperCount = magicNumbers(openMenu.data.sizeID); // max 9
     let rows = helperCount[0];
     let columns = helperCount[1];
     for (let r = 0; r < rows; r++) {
