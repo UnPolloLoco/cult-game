@@ -27,13 +27,7 @@ scene('game', () => {
     type: 'none',
     data: {},
   };
-  openMenu = {
-    type: 'deploy',
-    data: {
-      sizeID: 1,
-      weapon: 'none',
-    },
-  };
+  openMenu = MENU_DATA_DEFAULT['helperSpawnUI'];
 
   // short functions
 
@@ -58,15 +52,18 @@ scene('game', () => {
     // x = area scale
   };
   
-  const MENUS = {
-    'helperSpawnUI': 'deploy',
-  };
-  
   function menu(action, name) {
     get(name).forEach((h) => {
-      h.pos.y = action == 'open' ? h.ogY : width()*30;
+      h.pos.y = action == 'open' ? h.ogY : height()*30;
     });
-    openMenu.type = action == 'open' ? MENUS[name] : 'none';
+    if (action == 'open') {
+      openMenu = MENU_DATA_DEFAULT[name];
+    } else {
+      openMenu = {
+        type: 'none',
+        data: {},
+      };
+    };
   };
 
   // ui
@@ -622,6 +619,8 @@ scene('game', () => {
         deployCountDrag.pos.x = newPos*SCALE;
         deployCountDrag.scale = (helperCount + 15)/16;
         let majik = magicNumbers(helperCount);
+        openMenu.data.sizeID = helperCount;
+        debug.log(helperCount);
         deployMainText.text = `Deploying ${majik[0] * majik[1]}`;
       };
     };
