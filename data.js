@@ -1,3 +1,13 @@
+const MENU_DATA_DEFAULT = {
+  'helperSpawnUI': {
+    type: 'deploy',
+    data: {
+      sizeID: 1,
+      weapon: 'none',
+    }
+  },
+};
+
 const STUFF = {
   player: {
     bow: 'handmade',
