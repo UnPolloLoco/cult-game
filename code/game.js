@@ -385,7 +385,6 @@ scene('game', () => {
         time: time(),
       }
     ]);
-    if (alignment != 'you' || alignment != 'enemy') debug.log(alignment);
   };
 
   function critEffect(position) {
@@ -447,6 +446,7 @@ scene('game', () => {
     spawnPerson('basicSword', 'enemy');
   });
 
+  // shoot arrow manually
   onClick(() => {
     let spawnPos = player.pos.add(Vec2.fromAngle(player.angle).scale(SCALE*0.9)); 
     if (player.lastAttack + currentBow.cooldown <= time()) {
@@ -517,6 +517,7 @@ scene('game', () => {
     };
   });
 
+  // temorary deploy button
   onKeyPress('s', () => {
     let helperCount = magicNumbers(openMenu.data.sizeID); // max 9
     let rows = helperCount[0];
@@ -532,13 +533,14 @@ scene('game', () => {
     fighterEval();
   });
 
-
+  // fighters reeval their surroundings
   loop(0.5, () => {
     fighterEval();
   });
 
 
   onUpdate(() => {
+    // camera movement
     let scrollPower = Math.abs((mousePos().x - width()/2) /3 /SCALE) ** 5.2;
     scrollPower = Math.min(scrollPower, 14);
     if (scrollPower > 0.15) {
@@ -546,14 +548,17 @@ scene('game', () => {
       camPos(Math.min(Math.max(camPos().x + (SCALE*scrollPower/80)*spSign, width()/2), SCALE*32), height()/2);
     };
 
+    // turn your player towards mouse
     player.angle = player.pos.angle(toWorld(mousePos())) + 180;
 
+    // arrow despawner
     get('arrow').forEach((a) => {
       if (Math.abs(a.start - a.pos.x)/SCALE > a.data.range) {
         destroy(a);
       };
     });
 
+    // fighter onupdate
     get('fighter').forEach((f) => {
       let closest = f.target;
 
@@ -621,7 +626,6 @@ scene('game', () => {
         deployCountDrag.scale = (helperCount + 15)/16;
         let majik = magicNumbers(helperCount);
         openMenu.data.sizeID = helperCount;
-        debug.log(helperCount);
         deployMainText.text = `Deploying ${majik[0] * majik[1]}`;
       };
     };
