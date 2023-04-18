@@ -385,6 +385,7 @@ scene('game', () => {
         time: time(),
       }
     ]);
+    if (alignment != 'you' || alignment != 'enemy') debug.log(alignment);
   };
 
   function critEffect(position) {
