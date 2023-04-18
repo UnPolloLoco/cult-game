@@ -510,7 +510,7 @@ scene('game', () => {
       w.attackedBy.push(a.attackID);
       w.attackedBy = w.attackedBy.slice(-15);
       w.health -= dmg;
-      damageIndicator(a.pos, dmg, 'you', crit);
+      damageIndicator(a.pos, dmg, w.alignment, crit);
       
       if (w.health <= 0) destroy(w);
     };
