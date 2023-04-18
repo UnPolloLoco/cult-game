@@ -10,6 +10,7 @@ Started on December 31, 2022
 - Start working on UI
 - Deploy tells you where helpers will spawn
 - Deploy wont work if any are outside of the borders
+- Fix helper angle while attacking
 
 **Later**
 
