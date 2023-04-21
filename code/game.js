@@ -77,6 +77,10 @@ scene('game', () => {
     fixed(),
     "openDeploy",
   ]);
+  
+  // menus
+  
+  import * from 'popupObjects';
 
   // environment
   
