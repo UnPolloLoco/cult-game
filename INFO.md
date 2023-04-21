@@ -25,6 +25,8 @@ Started on December 31, 2022
 - Health bars?
 - Bosses?
 - Be able to move popup menus to the opposite side of the screen
+- Towers exist too :>
+- Building and deploying have a delay
 
 # Ideas
 
