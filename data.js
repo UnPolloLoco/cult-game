@@ -4,6 +4,7 @@ const MENU_DATA_DEFAULT = {
     data: {
       sizeID: 1,
       weapon: 'none',
+      isPlacing: false,
     }
   },
 };
@@ -32,7 +33,7 @@ const BOWS = {
 const MELEE = {
   stick: {
     name: 'Sharpened Stick',
-    desc: 'Cheap and plentiful, but definitely not ideal.',
+    desc: 'Cheap, plentiful, and definitely not ideal.',
     cooldown: 0.6,
     range: 0.8,
     damage: 2,
