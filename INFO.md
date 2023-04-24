@@ -4,8 +4,6 @@ Started on December 31, 2022
 
 # To-do
 
-**Soon**
-
 - Player can get stunned (never killed because plot armor)
 - Start working on UI
 - Deploy tells you where helpers will spawn
@@ -13,9 +11,7 @@ Started on December 31, 2022
 - Fix helper angle while attacking
 - Better camera movement
 - Dotted line to show bow range
-
-**Later**
-
+- Crosshair with arrow recharge bar nearby
 - Wall explodes when broken
 - Different shops (two?)
 - Only able to shop between rounds
@@ -32,6 +28,7 @@ Started on December 31, 2022
 
 - No rarities, but a sort of power value thing that lets weapon scale up
 - Towers exist too :>
+- Anti-chicken bozos come from an actual town thing not a cave
 
 # Terms
 
