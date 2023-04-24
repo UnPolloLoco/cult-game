@@ -27,7 +27,6 @@ scene('game', () => {
     type: 'none',
     data: {},
   };
-  openMenu = MENU_DATA_DEFAULT['helperSpawnUI'];
 
   // short functions
 
