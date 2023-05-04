@@ -68,3 +68,5 @@ const deployMainText = deploy.add([
     ogY: SCALE*4.5,
   }
 ]);
+
+export {};
