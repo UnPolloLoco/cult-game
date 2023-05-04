@@ -24,6 +24,17 @@ const SCALE = width()/10;
 const SIZE = 400;
 const TILE = SCALE/SIZE;
 
+const Z = {
+  ground:        -100,
+  fieldFighters:  0,
+  places:         100,
+  wallFighters:   200,
+  effects:        300,
+  dmg:            400,
+  meters:         500,
+  ui:             600,
+};
+
 loadRoot('sprites/');
 
 ls('temple');
