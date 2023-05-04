@@ -38,7 +38,7 @@ scene('game', () => {
     return m * ((1-x) / (2*x));
     // m = sprite size
     // x = area scale
-  };*//
+  };*/
   
   function menu(action, name) {
     get(name).forEach((h) => {
