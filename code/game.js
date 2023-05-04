@@ -152,7 +152,7 @@ scene('game', () => {
   // helper spawn ui
 
   const deploy = add([pos(0,0), rect(0,0)]);
-  import x from '_deployMenu.js';
+  import x from "_deployMenu.js";
 
   // fighting functions
 
