@@ -34,7 +34,7 @@ export const deploySetBar = add([
   fixed(),
   area({ 
     scale: vec2(1, 3),
-    offset: vec2(0, offsetScale(SCALE/4, 3)),
+    offset: vec2(0, -SCALE/12),
   }),
   "helperSpawnUI",
   {
