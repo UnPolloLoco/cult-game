@@ -69,4 +69,4 @@ const deployMainText = deploy.add([
   }
 ]);
 
-export {};
+export default 'a';
