@@ -1,4 +1,4 @@
-add([
+deploy.add([
   rect(10*SCALE, 2*SCALE),
   pos(0, height()),
   anchor('botleft'),
@@ -11,7 +11,7 @@ add([
   }
 ]);
 
-export const closeSpawnUI = add([
+const closeSpawnUI = deploy.add([
   rect(SCALE/2, SCALE/2),
   pos(SCALE, height() - SCALE*2),
   anchor('center'),
@@ -26,7 +26,7 @@ export const closeSpawnUI = add([
   }
 ]);
 
-export const deploySetBar = add([
+const deploySetBar = deploy.add([
   rect(SCALE*6.125, SCALE/4),
   pos(SCALE*0.75, SCALE*5.25),
   color(rgb(100,100,100)),
@@ -42,7 +42,7 @@ export const deploySetBar = add([
   }
 ]);
 
-export const deployCountDrag = add([
+const deployCountDrag = deploy.add([
   rect(SCALE*0.5, SCALE*0.5),
   pos(SCALE*1.25, SCALE*(5.5 - 1/8)),
   // from 1.25 to 6.25 (0->5 +1.25)
@@ -58,7 +58,7 @@ export const deployCountDrag = add([
   }
 ]);
 
-export const deployMainText = add([
+const deployMainText = deploy.add([
   text('Deploying 1', {size: SCALE*0.4}),
   pos(SCALE*0.75, SCALE*4.5),
   fixed(),
