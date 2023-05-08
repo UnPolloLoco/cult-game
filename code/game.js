@@ -532,7 +532,7 @@ scene('game', () => {
 
     if (openMenu.type == 'deploy') {
       let mx;
-      if (isMouseDown() && (deploy.deployCountDrag.isHovering() || deploy.deploySetBar.isHovering())) {
+      if (isMouseDown() && (deployCountDrag.isHovering() || deploySetBar.isHovering())) {
         let mx = mousePos().x / SCALE;
         let helperCount = Math.min(Math.max(
           Math.floor(8/5*mx + 1.25) -2
@@ -540,11 +540,11 @@ scene('game', () => {
         let newPos = Math.min(Math.max(
           5/8 * Math.round(helperCount + 1)
           ,1.25),6.25); 
-        deploy.deployCountDrag.pos.x = newPos*SCALE;
-        deploy.deployCountDrag.scale = (helperCount + 15)/16;
+        deployCountDrag.pos.x = newPos*SCALE;
+        deployCountDrag.scale = (helperCount + 15)/16;
         let majik = magicNumbers(helperCount);
         openMenu.data.sizeID = helperCount;
-        deploy.deployMainText.text = `Deploying ${majik[0] * majik[1]}`;
+        deployMainText.text = `Deploying ${majik[0] * majik[1]}`;
       };
     };
 
