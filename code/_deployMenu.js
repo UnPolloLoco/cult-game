@@ -1,8 +1,8 @@
-let deploy;
-let closeSpawnUI;
-let deploySetBar;
-let delpoyCountDrag;
-let deployMainText;
+var deploy;
+var closeSpawnUI;
+var deploySetBar;
+var delpoyCountDrag;
+var deployMainText;
     
 
 function menu_deploy() {
