@@ -530,7 +530,6 @@ scene('game', () => {
       d.opacity = 1 - (time() - d.time);
     });
 
-    try {
     if (openMenu.type == 'deploy') {
       let mx;
       if (isMouseDown() && (deploy.deployCountDrag.isHovering() || deploy.deploySetBar.isHovering())) {
@@ -548,7 +547,6 @@ scene('game', () => {
         deploy.deployMainText.text = `Deploying ${majik[0] * majik[1]}`;
       };
     };
-    } catch (e) { alert(e); };
 
     // end of onUpdate
   });
