@@ -8,9 +8,11 @@ scene('menu', () => {
     "play",
   ]);
 
+  try {
   onClick('play', (p) => {
     go('game')
-  })
+  });
+  } catch (e) { alert(e); };
 });
 
 go('menu')
