@@ -1,3 +1,4 @@
+let deploy;
 let closeSpawnUI;
 let deploySetBar;
 let delpoyCountDrag;
@@ -5,7 +6,7 @@ let deployMainText;
     
 
 function menu_deploy() {
-  const deploy = add([pos(0,0), rect(0,0)]);
+  deploy = add([pos(0,0), rect(0,0)]);
 
   deploy.add([
     rect(10*SCALE, 2*SCALE),
