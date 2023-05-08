@@ -150,8 +150,9 @@ scene('game', () => {
   ]);
 
   // helper spawn ui
-
+  try {
   menu_deploy();
+  } catch (e) { alert(e); };
 
   // fighting functions
 
