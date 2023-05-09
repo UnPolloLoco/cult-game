@@ -151,6 +151,7 @@ scene('game', () => {
 
   // helper spawn ui
   menu_deploy();
+  menu('close', 'helperSpawnUI');
 
   // fighting functions
 
