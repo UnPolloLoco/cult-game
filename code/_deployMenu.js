@@ -32,6 +32,9 @@ function menu_deploy() {
       ogY: height() - SCALE*2,
     }
   ]);
+  onClick('closeDeploy', () => { 
+      menu('close', 'helperSpawnUI');
+  });
 
   deploySetBar = add([
     rect(SCALE*6.125, SCALE/4),
