@@ -66,6 +66,10 @@ scene('game', () => {
     fixed(),
     "openDeploy",
   ]);
+  
+  onClick('openDeploy', () => { 
+    menu(openMenu.type == 'none' ? 'open' : 'close', 'helperSpawnUI'); 
+  });
 
   // environment
   
@@ -373,9 +377,6 @@ scene('game', () => {
       player.lastAttack = time();
     };
   });
-  
-  onClick('openDeploy', () => { menu('open', 'helperSpawnUI'); });
-  onClick('closeDeploy', () => { menu('close', 'helperSpawnUI'); });
 
   onCollide('arrow', 'fighter', (a,e) => {
     if (a.from != e.alignment) {
