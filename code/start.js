@@ -35,6 +35,20 @@ const Z = {
   ui:             600,
 };
 
+function menu(action, name) {
+  get(name).forEach((h) => {
+    h.pos.y = action == 'open' ? h.ogY : height()*30;
+  });
+  if (action == 'open') {
+    openMenu = MENU_DATA_DEFAULT[name];
+  } else {
+    openMenu = {
+      type: 'none',
+      data: {},
+    };
+  };
+};
+
 loadRoot('sprites/');
 
 ls('temple');
