@@ -519,6 +519,7 @@ scene('game', () => {
     });
 
     if (openMenu.type == 'deploy') {
+      debug.log(deployCountDrag);
       let mx;
       if (isMouseDown() && (deployCountDrag.isHovering() || deploySetBar.isHovering())) {
         let mx = mousePos().x / SCALE;
