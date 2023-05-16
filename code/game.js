@@ -12,7 +12,7 @@ scene('game', () => {
   const CRIT_CHANCE = 0.05;
   const CRIT_MULTI = 5;
 
-  var openMenu = {
+  openMenu = {
     type: 'none',
     data: {},
   };
