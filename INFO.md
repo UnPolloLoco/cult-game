@@ -4,6 +4,7 @@ Started on December 31, 2022
 
 # To-do
 
+- Fix openMenu content on deploy open/close
 - Player can get stunned (never killed because plot armor)
 - Start working on UI
 - Deploy tells you where helpers will spawn
