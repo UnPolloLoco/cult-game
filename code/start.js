@@ -35,6 +35,11 @@ const Z = {
   ui:             600,
 };
 
+var openMenu = {
+  type: 'none',
+  data: {},
+};
+
 function menu(action, name) {
   get(name).forEach((h) => {
     h.pos.y = action == 'open' ? h.ogY : height()*30;
