@@ -518,8 +518,9 @@ scene('game', () => {
       d.opacity = 1 - (time() - d.time);
     });
 
+    debug.log(openMenu.type);
     if (openMenu.type == 'deploy') {
-      debug.log(deployCountDrag);
+      //debug.log(deployCountDrag);
       let mx;
       if (isMouseDown() && (deployCountDrag.isHovering() || deploySetBar.isHovering())) {
         let mx = mousePos().x / SCALE;
