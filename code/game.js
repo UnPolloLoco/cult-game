@@ -16,6 +16,8 @@ scene('game', () => {
     type: 'none',
     data: {},
   };
+  
+  const PAUSED = false;
 
   // short functions
 
