@@ -533,7 +533,7 @@ scene('game', () => {
           5/8 * Math.round(helperCount + 1)
           ,1.25),6.25); 
         deployCountDrag.pos.x = newPos*SCALE;
-        deployCountDrag.scale = (helperCount + 15)/16;
+        //deployCountDrag.scale = (helperCount + 15)/16;
         let majik = magicNumbers(helperCount);
         openMenu.data.sizeID = helperCount;
         deployMainText.text = `Deploying ${majik[0] * majik[1]}`;
