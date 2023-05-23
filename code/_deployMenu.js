@@ -78,4 +78,29 @@ function menu_deploy() {
       ogY: SCALE*4.5,
     }
   ]);
+    
+  deploySettingsDone = add([
+    sprite('helper'),
+    pos(SCALE*8.5, SCALE*4.5),
+    color(GREEN),
+    scale(SCALE),
+    z(Z.ui),
+    "helperSpawnUI",
+    {
+      ogY: SCALE*4.5,
+    }
+  ]);
+  
+  for (let i = 0; i < 2; i++) {
+    add([
+      rect(SCALE*0.4, SCALE*0.4),
+      pos(SCALE*7.9, SCALE*(4.5 + i*0.6)),
+      color(rgb(100,100,100)),
+      z(Z.ui),
+      "helperSpawnUI",
+      {
+        ogY: SCALE*(4.5 + i*0.6),
+      }
+    ]);
+  };
 };
