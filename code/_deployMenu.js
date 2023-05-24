@@ -80,7 +80,7 @@ function menu_deploy() {
   ]);
     
   deploySettingsDone = add([
-    sprite('helper'),
+    rect(SCALE, SCALE),
     pos(SCALE*8.5, SCALE*4.5),
     color(GREEN),
     scale(SCALE),
