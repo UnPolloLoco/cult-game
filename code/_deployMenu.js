@@ -80,6 +80,7 @@ function menu_deploy() {
   ]);
     
   deploySettingsDone = add([
+    fixed(),
     rect(SCALE, SCALE),
     pos(SCALE*8.5, SCALE*4.5),
     color(GREEN),
@@ -95,6 +96,7 @@ function menu_deploy() {
     add([
       rect(SCALE*0.4, SCALE*0.4),
       pos(SCALE*7.9, SCALE*(4.5 + i*0.6)),
+      fixed(),
       color(rgb(100,100,100)),
       z(Z.ui),
       "helperSpawnUI",
